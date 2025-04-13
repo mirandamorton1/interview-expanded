@@ -1,6 +1,6 @@
 "use client";
 
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaMagnifyingGlass, FaBook, FaArrowRight } from "react-icons/fa6";
 
 export default function SearchBar({
   search,
@@ -33,8 +33,20 @@ export default function SearchBar({
         <FaMagnifyingGlass className="absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-400 text-xl" />
       </div>
 
-     <div className="relative">
-        <select
+     <div className="relative flex items-center">
+      <button
+        onClick={toggleStudyMode}
+        className="text-blue-600 font-bold flex items-center py-1 px-4 border  rounded-full hover:cursor-pointer mr-4"
+      >
+        <FaBook className="text-blue-600 mr-2" /> Study Mode
+      </button>
+      <button
+        onClick={startQuiz}
+        className="text-green-700 font-bold flex items-center py-1 px-4 mr-4 border rounded-full hover:cursor-pointer"
+      >
+        Start Quiz <FaArrowRight className="text-green-700 ml-2" />
+      </button>
+      <select
           value={selectedLanguage}
           onChange={(e) => setSelectedLanguage(e.target.value)} 
           className="w-48 py-2 px-4 mr-4 rounded-md border border-gray-700 bg-white text-gray-800 font-semibold shadow-md focus:outline-none transition-all duration-300 ease-in-out hover:cursor-pointer"
@@ -46,19 +58,6 @@ export default function SearchBar({
             </option>
           ))}
         </select>
-
-      <button
-        onClick={toggleStudyMode}
-        className="text-gray-800 font-bold py-1 px-4 border border-gray-800 rounded-md hover:cursor-pointer"
-      >
-        Study Mode
-      </button>
-      <button
-        onClick={startQuiz}
-        className="bg-green-500 text-white py-2 px-4 rounded-full hover:cursor-pointer"
-      >
-        Start Quiz
-      </button>
       </div>
     </div>
   );

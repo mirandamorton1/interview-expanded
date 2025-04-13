@@ -83,14 +83,15 @@ export default function QuizMode({ countries, exitQuiz, setScore }: QuizModeProp
 
   return (
     <div className="flex flex-col items-center justify-center p-4">
-      <h2 className="text-2xl font-semibold mb-4">Quiz: Name the Country</h2>
+      <h2 className="text-2xl font-semibold mb-4">Name the Country</h2>
       
-      <div className="mb-4 border-2 border-gray-400 p-2 rounded-lg">
+      <div className="mb-4 p-2 rounded-lg">
         <Image
           src={currentCountry.flags.svg}
           alt={`Flag of ${currentCountry.name.common}`}
           width={288} 
           height={168}
+          className="border border-gray-300"
         />
       </div>
 
@@ -111,7 +112,7 @@ export default function QuizMode({ countries, exitQuiz, setScore }: QuizModeProp
         ))}
       </form>
 
-      <button onClick={handleSubmitAnswer} className="bg-blue-500 text-white py-2 px-4 rounded-full mb-4">
+      <button onClick={handleSubmitAnswer} className="text-green-700 border py-2 px-4 rounded-full mb-4">
         Submit
       </button>
 
