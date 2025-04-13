@@ -32,7 +32,7 @@ export default function SearchBar({
         <select
           value={selectedLanguage}
           onChange={(e) => setSelectedLanguage(e.target.value)} 
-          className="w-48 py-2 px-4 rounded-md border border-gray-900 bg-white text-gray-800 font-semibold shadow-md focus:outline-none transition-all duration-300 ease-in-out"
+          className="w-48 py-2 px-4 rounded-md border border-gray-700 bg-white text-gray-800 font-semibold shadow-md focus:outline-none transition-all duration-300 ease-in-out"
         >
           <option value="">All Languages</option>
           {uniqueLanguages.map((lang) => (

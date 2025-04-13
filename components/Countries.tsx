@@ -4,8 +4,8 @@ import CountryCard from "@/components/CountryCard";
 
 export default function Countries({ countries }: { countries: Country[] }) {
   return (
-    <div className="flex justify-center my-8 z-10 relative">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-[931px] h-[703px] p-6 pt-12 bg-gray-300 rounded-xl overflow-y-auto">
+    <div className="flex justify-center my-8 z-10 relative px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full p-6 rounded-xl overflow-y-auto">
         {countries.length > 0 ? (
           countries.map((country, key) => (
             <CountryCard
