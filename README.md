@@ -1,4 +1,4 @@
-# Countries Info Explorer 🌍
+# Country Explorer: Discover & Test Your Knowledge 🌍
 
 ## Description
 

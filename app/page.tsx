@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import Countries from "@/components/Countries";
 import SearchBar from "@/components/SearchBar";
@@ -9,7 +8,6 @@ import { Country } from "@/types/country";
 
 export default function Home() {
   const [search, setSearch] = useState("");
-  const [showFilters, setShowFilters] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [countries, setCountries] = useState<Country[]>([]);
 
@@ -50,46 +48,14 @@ export default function Home() {
 
   return (
     <div className="relative overflow-hidden min-h-screen bg-white">
-      {/* Globes */}
-      <Image
-        src="/globeImage.png"
-        alt="Globe Left"
-        width={360}
-        height={427}
-        className="absolute top-47 right-40 translate-x-1/2 -translate-y-1/2 z-0"
-      />
-      <Image
-        src="/globeImage.png"
-        alt="Left Globe"
-        width={360}
-        height={360}
-        className="absolute top-47 left-40 -translate-x-1/2 -translate-y-1/2 z-0"
-      />
-
       <Header />
       <SearchBar
         search={search}
         setSearch={setSearch}
-        onFilterClick={() => setShowFilters((prev) => !prev)}
+        uniqueLanguages={uniqueLanguages}
+        selectedLanguage={selectedLanguage}
+        setSelectedLanguage={setSelectedLanguage}
       />
-
-      {showFilters && (
-        <div className="flex justify-center mt-4">
-          <select
-            value={selectedLanguage}
-            onChange={(e) => setSelectedLanguage(e.target.value)}
-            className="border rounded px-4 py-2 bg-white text-black"
-          >
-            <option value="">All Languages</option>
-            {uniqueLanguages.map((lang) => (
-              <option key={lang} value={lang}>
-                {lang}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
-
       <Countries countries={filteredCountries} />
     </div>
   );
