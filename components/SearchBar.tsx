@@ -8,7 +8,9 @@ export default function SearchBar({
   uniqueLanguages,
   selectedLanguage,
   setSelectedLanguage,
-  toggleStudyMode
+  toggleStudyMode,
+  startQuiz,
+
 }: {
   search: string;
   setSearch: (value: string) => void;
@@ -16,6 +18,7 @@ export default function SearchBar({
   selectedLanguage: string;
   setSelectedLanguage: (value: string) => void;
   toggleStudyMode: () => void;
+  startQuiz: () => void;
 }) {
   return (
     <div className="flex justify-center items-center pb-5 space-x-4">
@@ -34,7 +37,7 @@ export default function SearchBar({
         <select
           value={selectedLanguage}
           onChange={(e) => setSelectedLanguage(e.target.value)} 
-          className="w-48 py-2 px-4 mr-4 rounded-md border border-gray-700 bg-white text-gray-800 font-semibold shadow-md focus:outline-none transition-all duration-300 ease-in-out"
+          className="w-48 py-2 px-4 mr-4 rounded-md border border-gray-700 bg-white text-gray-800 font-semibold shadow-md focus:outline-none transition-all duration-300 ease-in-out hover:cursor-pointer"
         >
           <option value="">All Languages</option>
           {uniqueLanguages.map((lang) => (
@@ -49,6 +52,12 @@ export default function SearchBar({
         className="text-gray-800 font-bold py-1 px-4 border border-gray-800 rounded-md hover:cursor-pointer"
       >
         Study Mode
+      </button>
+      <button
+        onClick={startQuiz}
+        className="bg-green-500 text-white py-2 px-4 rounded-full hover:cursor-pointer"
+      >
+        Start Quiz
       </button>
       </div>
     </div>

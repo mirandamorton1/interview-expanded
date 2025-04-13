@@ -22,8 +22,8 @@ export default function CountryCard({
   flags,
 }: CountryCardProps) {
   return (
-    <div className="bg-white text-black p-0 shadow-md w-full border border-gray-300">
-        <div className="w-full h-40 overflow-hidden">
+    <div className="bg-white text-black p-0 shadow-md w-full border border-gray-300 rounded">
+        <div className="w-full h-40 overflow-hidden rounded">
           <Image
             src={flags.svg} 
             alt={flags.alt || `Flag of ${name}`}
