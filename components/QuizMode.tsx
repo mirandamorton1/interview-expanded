@@ -112,20 +112,20 @@ export default function QuizMode({ countries, exitQuiz, setScore }: QuizModeProp
         ))}
       </form>
 
-      <button onClick={handleSubmitAnswer} className="text-green-700 border py-2 px-4 rounded-full mb-4">
+      <button onClick={handleSubmitAnswer} className="text-green-700 border py-2 px-4 rounded-full mb-4 cursor-pointer">
         Submit
       </button>
 
       {isAnswered && (
         <div className="text-center">
           <p className="text-lg">{feedback}</p>
-          <button onClick={nextQuestion} className="bg-green-500 text-white py-2 px-4 rounded-full mt-4">
+          <button onClick={nextQuestion} className="bg-green-500 text-white py-2 px-4 rounded-full mt-4 cursor-pointer">
             Next Question
           </button>
         </div>
       )}
 
-      <button onClick={exitQuiz} className="bg-gray-500 text-white py-2 px-4 rounded-full mt-4">
+      <button onClick={exitQuiz} className="bg-gray-500 text-white py-2 px-4 rounded-full mt-4 cursor-pointer">
         Exit Quiz
       </button>
     </div>

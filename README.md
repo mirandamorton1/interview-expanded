@@ -2,13 +2,15 @@
 
 ## Description
 
-A sleek, responsive web app built with Next.js and Tailwind CSS that allows users to explore countries, search by name, and filter by language.
+A sleek, responsive web app built with Next.js and Tailwind CSS that allows users to explore countries, search by name, and filter by language. There is a flashcard feature that allows you to study, and a quiz you can take after. 
 
 ## ✨ Features
 
 - Search for countries by name
 - Filter countries by language
 - Displays key info: language, currency, timezone, borders, and flag
+- Flashcard feature for studying countries
+- Quiz feature to test your knowledge
 - Fully responsive layout
 - Smooth UX with decorative visuals (globes!)
 - Styled with Tailwind CSS

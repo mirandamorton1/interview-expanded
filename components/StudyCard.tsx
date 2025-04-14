@@ -17,7 +17,7 @@ export default function StudyCard({ flags, name }: StudyCardProps) {
 
   return (
     <div
-      className="w-full h-40 bg-white shadow-md rounded-xl cursor-pointer border border-gray-300"
+      className="w-full h-40 bg-white shadow-md rounded-xl cursor-pointer border border-gray-300 transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-gray-500"
       onClick={toggleFlip}
     >
       <div className={`w-full h-full ${isFlipped ? "bg-white" : ""}`}>
