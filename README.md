@@ -4,6 +4,13 @@
 
 A sleek, responsive web app built with Next.js and Tailwind CSS that allows users to explore countries, search by name, and filter by language. There is a flashcard feature that allows you to study, and a quiz you can take after. 
 
+![Screenshot 2025-04-13 at 8 39 24 PM](https://github.com/user-attachments/assets/903ce1e3-0dfa-4703-a38a-c2e11414bf4f)
+
+![Screenshot 2025-04-13 at 8 39 46 PM](https://github.com/user-attachments/assets/c9fa043f-359b-4f9a-a6fa-aebfa4cb2e87)
+
+![Screenshot 2025-04-13 at 8 40 10 PM](https://github.com/user-attachments/assets/f8be5118-0d6e-45c9-814e-f40b63106d58)
+
+
 ## ✨ Features
 
 - Search for countries by name
